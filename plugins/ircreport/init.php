@@ -8,11 +8,11 @@ function ircReport($stuff)
 	socket_close($sock);
 }
 
-function ircUserColor($name, $gender, $power) {
+function ircUserColor($name, $colorset, $power) {
 	$gColors = array(0 => 12, 1 => 13, 2 => '02');
 	$pChars  = array(1 => "%", 2 => "@", 3 => "&", 4 => "~", 5 => "+");
 
-	$color = $gColors[$gender];
+	$color = $gColors[$colorset];
 	if ($power > 0)
 		$powerChar = $pChars[$power];
 	else
